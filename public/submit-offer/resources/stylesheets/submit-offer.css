@@ -1,0 +1,24 @@
+.submit-offer {
+    height: 450px;
+}
+
+.so-header {
+    text-align: center;
+    font-family: sans-serif;
+    color: #7b7b7b;
+    font-size: 21px;
+    font-weight: 300;
+    padding-bottom: 35px;
+}
+
+.submit-offer input {
+    font-size: 16px;
+}
+
+.submit-offer span {
+    font-size: 16px;
+}
+
+.so-contract-input {
+    top: 15px
+}

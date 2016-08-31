@@ -1,0 +1,101 @@
+<div default-container>
+    <div class="submit-offer">
+        <div class="col-xs-12 so-header">SUBMIT OFFER NOTIFICATION</div>
+        <div class="col-xs-12 so-body">
+            <form name="myForm">
+                <div class="row  margin-bottom-20">
+                    <div class="col-xs-6">
+                        <input type="text"
+                               class="form-control"
+                               id="candidate_name"
+                               ng-model="user.candidateName"
+                               placeholder="Candidate Name">
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="input-group" style="margin-bottom: 0;">
+                            <span class="input-group-btn">
+                                <button style="background-color: white;
+                                border-bottom: 2px solid #6D1616;
+                                padding-bottom: 5px;
+                                border-radius: 0;" ;
+                                        class="btn"
+                                        ng-click="vm.opened = true">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                            <input type="text"
+                                   class="form-control"
+                                   uib-datepicker-popup="{{format}}"
+                                   ng-model="user.date"
+                                   is-open="vm.opened"
+                                   close-text="Close"
+                                   placeholder="Date Picker"/>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="row  margin-bottom-20">
+                    <div class="col-xs-6">
+                        <input type="text"
+                               class="form-control"
+                               id="client_name"
+                               ng-model="user.clientName"
+                               placeholder="Client Name">
+                    </div>
+                    <div class="col-xs-6 so-contract-input">
+                        <span>Contract at least 6 months</span>&nbsp;
+                        <label>
+                            <input type="radio"
+                                   ng-model="user.isContract"
+                                   value="0"> NO
+                        </label>
+                        &nbsp;
+                        <label>
+                            <input type="radio"
+                                   ng-model="user.isContract"
+                                   value="1"> YES
+                        </label>
+                    </div>
+                </div>
+                <div class="row  margin-bottom-20">
+                    <div class="col-xs-6">
+                        <input type="text"
+                               class="form-control"
+                               id="candidate_rate"
+                               ng-model="user.candidateRate"
+                               placeholder="Candidate Pay Rate">
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="text"
+                               class="form-control"
+                               id="egen_rate"
+                               ng-model="user.egenRate"
+                               placeholder="Egen Bill Rate">
+                    </div>
+                </div>
+                <div class="row  margin-bottom-20">
+                    <div class="col-xs-6">
+                        <input type="file"
+                               class="form-control"
+                               id="resume"
+                               ng-model="user.resume"
+                               placeholder="Upload Resume">
+                    </div>
+                </div>
+                <div class="col-xs-12 margin-top-20">
+                    <div class="text-align-center">
+                        <a type="submit"
+                           href="#app/user-dashboard"
+                           class="app btn btn-default">BACK TO MENU
+                        </a>
+                        <a type="submit"
+                           href="#app/user-dashboard"
+                           ng-click="vm.update(user)"
+                           class="app btn btn-primary">SUBMIT
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

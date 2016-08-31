@@ -1,0 +1,26 @@
+.login-container-height {
+    height: 500px;
+}
+
+.login-container-height input {
+    font-size: 16px;
+}
+
+.login-container-height .login-body {
+    padding-top: 130px;
+}
+
+.login-container-height .login-body-email{
+    margin-bottom: 50px;
+}
+
+.login-container-height .login-body-location {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.login-container-height .login-glyph-dropdown {
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}

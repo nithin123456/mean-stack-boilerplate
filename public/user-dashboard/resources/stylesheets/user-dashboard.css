@@ -1,0 +1,35 @@
+.ud-add-container-height {
+    height: 450px;
+}
+
+.ud-header {
+    text-align: center;
+    font-family: sans-serif;
+    color: #7b7b7b;
+    font-size: 21px;
+    font-weight: 300;
+    padding-bottom: 35px;
+}
+
+.ud-add-tile-spacing {
+    padding-bottom: 30px;
+}
+
+.ud-add-tile {
+    display: block;
+    width: 180px;
+    height: 100px;
+    padding: 25px;
+    border: solid 2px #6D1616;
+    text-align: center;
+}
+
+.ud-pull-right {
+    float: right;
+}
+
+.ud-add-hover-tile {
+    cursor: pointer;
+    background-color: #6D1616;
+    color: white;
+}
