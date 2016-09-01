@@ -8,6 +8,7 @@
                     <input type="email"
                            class="form-control"
                            id="email"
+                           ng-model="vm.userEmail"
                            placeholder="Email">
                 </div>
                 <div class="form-group login-body-location">
@@ -19,10 +20,10 @@
                     <span class="glyphicon glyphicon-triangle-bottom login-glyph-dropdown"></span>
                 </div>
                 <div style="text-align: center;">
-                    <a type="submit"
-                       href="#app/user-dashboard"
+                    <div type="submit"
+                       ng-click="vm.validateUser();"
                        class="btn btn-primary">Submit
-                    </a>
+                    </div>
                 </div>
             </div>
             <div class="col-xs-2"></div>

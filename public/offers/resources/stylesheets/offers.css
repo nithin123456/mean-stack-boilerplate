@@ -1,0 +1,32 @@
+.offers-grid-inner-container {
+    margin-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#offers-grid {
+    height: 500px;
+}
+
+.search-container {
+    margin-top: 70px;
+}
+
+.search-container .search-btn {
+    background-color: #fff;
+    border-radius: 5px 0px 0px 5px;
+    width: 2%;
+    border: none;
+    height: 34px;
+}
+
+.search-container input.form-control {
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    display: inline-block;
+    width: 100%;
+}
+
+.search-container .col-xs-10 {
+    padding: 0px;
+}

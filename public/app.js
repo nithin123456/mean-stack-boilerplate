@@ -6,6 +6,8 @@
 
             // Core 3rd party modules:
             'ngRoute',
+            'ui.grid',
+            'ui.grid.resizeColumns',
 
             // local modules
             'app.login',
@@ -14,6 +16,7 @@
             'app.rateCalculator',
             'app.submitOffer',
             'app.benefitsPackage',
+            'app.offers',
             'app.view2'
         ])
         .config(config);
