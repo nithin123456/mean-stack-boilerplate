@@ -1,0 +1,45 @@
+.ui-grid-header-cell {
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 400;
+    background-color: #fff;
+    border: none;
+    padding-top: 25px;
+}
+
+.ui-grid-header {
+    border: none;
+}
+
+.ui-grid-cell {
+    border: none;
+}
+
+.ui-grid-row {
+    background-color: #fff;
+}
+
+.ui-grid-top-panel {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.ui-grid {
+    border: none;
+}
+
+.ui-grid-row:nth-child(odd) .ui-grid-cell, .ui-grid-row:nth-child(even) .ui-grid-cell {
+    background-color: #fff;
+    border-top: 1px solid #CCCCCC !important;
+}
+
+.ui-grid-row .ui-grid-cell-contents {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 1;
+    color: #000;
+    font-size: 13px;
+}
+
+.ui-grid-header-canvas {
+    background-color: #ffffff;
+}
