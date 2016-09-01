@@ -46,3 +46,24 @@
     color: red;
 }
 
+.padding-bottom-160 {
+    padding-bottom: 160px;
+}
+
+.float-right {
+    float: right;
+}
+
+.dark-red {
+    color: #6D1616;
+}
+
+.dark-red-border {
+    border-color: #6D1616;
+    border-width: 0;
+    border-bottom-width: 2px;
+}
+
+.padding-bottom-100 {
+    padding-bottom: 100px;
+}
