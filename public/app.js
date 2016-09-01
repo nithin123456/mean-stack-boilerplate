@@ -13,8 +13,7 @@
             'app.qualifyCandidate',
             'app.rateCalculator',
             'app.submitOffer',
-            'app.benefitsPackage',
-            'app.view2'
+            'app.benefitsPackage'
         ])
         .config(config);
 

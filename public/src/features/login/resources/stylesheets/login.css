@@ -1,0 +1,31 @@
+.login-container {
+    height: 500px;
+}
+
+.login-container input {
+    font-size: 16px;
+}
+
+.login-container label {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.login-container label.active {
+    color: #6D1616
+}
+
+.login-container .padding-top-120 {
+    padding-top: 120px;
+}
+
+.login-container .login-body-location {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.login-container .login-glyph-dropdown {
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}
