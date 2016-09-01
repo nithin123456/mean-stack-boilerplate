@@ -7,6 +7,7 @@
                     <input type="text"
                            class="form-control"
                            id="name"
+                           ng-model="vm.candidateName"
                            placeholder="Candidate name">
                 </div>
             </div>
@@ -14,7 +15,8 @@
                 <input type="text"
                        class="form-control"
                        id="optional"
-                       placeholder="Other optional field">
+                       ng-model="vm.candidateEmail"
+                       placeholder="Candidate email (optional)">
             </div>
         </div>
         <div class="col-xs-12 padding-bottom-100">
@@ -37,10 +39,10 @@
                href="#app/user-dashboard"
                class="app btn btn-default">BACK TO MENU
             </a>
-            <a type="submit"
-               href="#app/user-dashboard"
+            <button type="submit"
+               ng-click="vm.send()"
                class="app btn btn-primary">SEND
-            </a>
+            </button>
         </div>
     </div>
 </div>
