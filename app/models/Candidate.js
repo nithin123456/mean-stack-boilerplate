@@ -6,7 +6,7 @@ var candidateSchema = mongoose.Schema(
 		clientName: String,
 		payRate: Number,
 		startDate: String,
-		isSixMonthsOrMore: Boolean,
+		isSixMonthsOrMore: String,
 		billRate: Number,
 		phone: Number,
 		email: String

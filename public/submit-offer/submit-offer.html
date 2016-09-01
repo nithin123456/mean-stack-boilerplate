@@ -8,7 +8,7 @@
                         <input type="text"
                                class="form-control"
                                id="candidate_name"
-                               ng-model="user.candidateName"
+                               ng-model="user.name"
                                placeholder="Candidate Name">
                     </div>
                     <div class="col-xs-6">
@@ -26,7 +26,7 @@
                             <input type="text"
                                    class="form-control"
                                    uib-datepicker-popup="{{format}}"
-                                   ng-model="user.date"
+                                   ng-model="user.startDate"
                                    is-open="vm.opened"
                                    close-text="Close"
                                    placeholder="Date Picker"/>
@@ -46,14 +46,14 @@
                         <span>Contract at least 6 months</span>&nbsp;
                         <label>
                             <input type="radio"
-                                   ng-model="user.isContract"
-                                   value="0"> NO
+                                   ng-model="user.isSixMonthsOrMore"
+                                   value=false> NO
                         </label>
                         &nbsp;
                         <label>
                             <input type="radio"
-                                   ng-model="user.isContract"
-                                   value="1"> YES
+                                   ng-model="user.isSixMonthsOrMore"
+                                   value=true> YES
                         </label>
                     </div>
                 </div>
@@ -62,14 +62,14 @@
                         <input type="text"
                                class="form-control"
                                id="candidate_rate"
-                               ng-model="user.candidateRate"
+                               ng-model="user.payRate"
                                placeholder="Candidate Pay Rate">
                     </div>
                     <div class="col-xs-6">
                         <input type="text"
                                class="form-control"
                                id="egen_rate"
-                               ng-model="user.egenRate"
+                               ng-model="user.billRate"
                                placeholder="Egen Bill Rate">
                     </div>
                 </div>
