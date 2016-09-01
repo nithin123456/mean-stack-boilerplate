@@ -38,7 +38,7 @@
                 {
                     displayName: 'Min 6-Month',
                     field: 'isSixMonthsOrMore',
-                    cellTemplate: 'cell-templates/offers-min-6-months.html'
+                    cellTemplate: 'src/cell-templates/offers-min-6-months.html'
                 }
             ],
             data: vm.offersData

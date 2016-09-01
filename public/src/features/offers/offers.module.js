@@ -13,7 +13,7 @@
     // @ngInject
     function config($routeProvider) {
         $routeProvider.when('/admin/offers', {
-            templateUrl: 'offers/offers.html',
+            templateUrl: 'src/features/offers/offers.html',
             controller: 'OffersController',
             controllerAs: 'vm'
         });
