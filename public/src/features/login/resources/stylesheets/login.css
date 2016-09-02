@@ -15,8 +15,8 @@
     color: #6D1616
 }
 
-.login-container .padding-top-120 {
-    padding-top: 120px;
+.login-container .padding-top-60 {
+    padding-top: 60px;
 }
 
 .login-container .login-body-location {
@@ -28,4 +28,17 @@
     position: absolute;
     right: 5px;
     top: 12px;
+}
+
+.login-container .login-answer {
+    text-align: center;
+    font-family: sans-serif;
+    color: #7b7b7b;
+    font-size: 21px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.login-container .login-color-remove {
+    color: red;
 }

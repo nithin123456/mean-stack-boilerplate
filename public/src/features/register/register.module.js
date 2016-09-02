@@ -9,7 +9,8 @@
             'ui.bootstrap',
 
             // local modules
-            'app.defaultContainer'
+            'app.defaultContainer',
+            'app.utility'
         ])
         .config(config);
 

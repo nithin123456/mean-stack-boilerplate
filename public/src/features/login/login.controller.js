@@ -6,17 +6,51 @@
         .controller('loginController', loginController);
 
     // @ngInject
-    function loginController($location) {
+    function loginController($location, utilityService, $http) {
         var vm = this;
 
-        vm.states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Dakota', 'North Carolina', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+        vm.utilityService = utilityService;
+        vm.userMessageDisplay = false;
+        vm.userMessage = '';
+        vm.loginUser = loginUser;
         vm.userEmail = 'trevor.benson@egeni.io';
 
         vm.validateUser = validateUser;
+        vm.hideUserMessage = hideUserMessage;
 
+        function loginUser() {
+            if (vm.utilityService.emailValidator(vm.emailAdd)) {
+                if (vm.password && vm.password.length > 6) {
+                    loginApi({
+                        username: vm.emailAdd,
+                        password: vm.password
+                    });
+                    $location.path('/user-dashboard');
+                } else {
+                    vm.userMessage = 'Password should be greater than 6 characters';
+                    vm.userMessageDisplay = true;
+                }
+            } else {
+                vm.userMessage = 'Bad Email Address';
+                vm.userMessageDisplay = true;
+            }
+        }
+
+        function hideUserMessage() {
+            vm.userMessageDisplay = false;
+        }
+
+        function loginApi(user) {
+            $http.post('/login', user).then(function (res) {
+                $location.path('/user-dashboard');
+            }, function (res) {
+                vm.userMessage = 'Email Address and Password Do not Match';
+                vm.userMessageDisplay = true;
+            })
+        }
 
         function validateUser() {
             $location.path('/admin/offers');
-        };
+        }
     }
 }(angular, _));
