@@ -5,10 +5,10 @@
         .module('app.defaultContainer')
         .controller('DefaultContainerController', DefaultContainerController);
 
-    function DefaultContainerController() {
+    function DefaultContainerController($window) {
         var vm = this;
 
-        vm.email = 'trevor.benson@egeni.com';
+        vm.email = $window.localStorage.getItem('emailAddress');
     }
 
 }(angular));

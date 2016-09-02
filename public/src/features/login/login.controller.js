@@ -6,7 +6,7 @@
         .controller('loginController', loginController);
 
     // @ngInject
-    function loginController($location, utilityService, $http) {
+    function loginController($location, utilityService, $http, $window) {
         var vm = this;
 
         vm.utilityService = utilityService;
@@ -17,6 +17,14 @@
 
         vm.validateUser = validateUser;
         vm.hideUserMessage = hideUserMessage;
+        vm.init = init;
+
+        init();
+
+        function init() {
+            $window.localStorage.removeItem('emailAddress');
+            $window.localStorage.removeItem('timeStamp');
+        }
 
         function loginUser() {
             if (vm.utilityService.emailValidator(vm.emailAdd)) {
@@ -25,7 +33,6 @@
                         username: vm.emailAdd,
                         password: vm.password
                     });
-                    $location.path('/user-dashboard');
                 } else {
                     vm.userMessage = 'Password should be greater than 6 characters';
                     vm.userMessageDisplay = true;
@@ -42,6 +49,8 @@
 
         function loginApi(user) {
             $http.post('/login', user).then(function (res) {
+                $window.localStorage.setItem('emailAddress', vm.emailAdd);
+                $window.localStorage.setItem('timeStamp', Date.now());
                 $location.path('/user-dashboard');
             }, function (res) {
                 vm.userMessage = 'Email Address and Password Do not Match';

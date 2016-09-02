@@ -15,6 +15,15 @@
         vm.registerUser = registerUser;
         vm.updateUserExist = updateUserExist;
 
+        vm.init = init;
+
+        init();
+
+        function init() {
+            $window.localStorage.removeItem('emailAddress');
+            $window.localStorage.removeItem('timeStamp');
+        }
+
         function updateUserExist() {
             vm.userMessageDisplay = false;
         }
@@ -49,11 +58,17 @@
 
         function registerApi(user) {
             $http.post('/register', user).then(function (res) {
+                $window.localStorage.setItem('emailAddress', vm.emailAdd);
+                $window.localStorage.setItem('timeStamp', Date.now());
                 $location.path('/user-dashboard');
-                }, function (res) {
+            }, function (res) {
+                if (res.status === 404) {
+                    vm.userMessage = 'Server Down :(';
+                    vm.userMessageDisplay = true;
+                }
                 vm.userMessage = 'Email Address already Registered';
                 vm.userMessageDisplay = true;
-                })
+            })
         }
     }
 }(angular, _));
