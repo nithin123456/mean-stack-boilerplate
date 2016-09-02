@@ -11,6 +11,7 @@
 
             // local modules
             'app.login',
+            'app.register',
             'app.userDashboard',
             'app.qualifyCandidate',
             'app.rateCalculator',

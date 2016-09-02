@@ -161,6 +161,10 @@ input[type=email]:focus:not([readonly]) + label {
     color: #6D1616;
 }
 
+input[type=password]:focus:not([readonly]) + label {
+    color: #6D1616;
+}
+
 textarea.materialize-textarea:focus:not([readonly]) + label {
     color: #6D1616;
 }
